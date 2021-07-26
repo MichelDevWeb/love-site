@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <i class="fa fa-heart heart"></i><a class="navbar-brand" href="#">Love you</a><i class="fa fa-heart heart"></i>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Right header -->
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a href="#" class="nav-link m-0 p-0" target="_blank">
+                        <i class="fa fa-heart heart"></i><a class="navbar-brand" href="#">Today: {{currentDate | date:'dd-MM-yyyy'}}</a><i class="fa fa-heart heart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

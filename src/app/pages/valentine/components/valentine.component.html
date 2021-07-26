@@ -1,0 +1,99 @@
+<div class="page-header section-dark" style="background-image: url('assets/img/valentine/background1.jpg')">
+    <div class="filter"></div>
+    <div class="content-center">
+        <div class="container" *ngIf="getElapsedTime(entry) as elapsed">
+            <div class="title-brand">
+                <!--                <div class="angular-logo">-->
+                <!--                    <img src="assets/img/valentine/header-1.jpg" alt="">-->
+                <!--                </div>-->
+                <h1 class="header-site">{{data?.headerTitle}}</h1>
+                <h1 class="presentation-title override-title">
+                    {{elapsed.years}} years
+                </h1>
+                <div class="fog-low">
+                    <img src="assets/img/fog-low.png" alt="">
+                </div>
+                <div class="fog-low right">
+                    <img src="assets/img/fog-low.png" alt="">
+                </div>
+            </div>
+
+<!--            <h1 class="presentation-subtitle text-center">{{elapsed.months}} m {{elapsed.days}} d </h1>-->
+            <h3 class="text-center" style="font-family: cursive; color: white;">{{elapsed.months}} months {{elapsed.days}} days together</h3>
+           <h2 class="presentation-subtitle text-center">{{elapsed.hours}} h {{elapsed.minutes}} m {{elapsed.seconds}} s</h2>
+        </div>
+    </div>
+    <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+
+    <!-- <div *ngFor="let in of counter(4) ;let i = index" (click)="onClick(imageHeader)"
+        class="card p-2 image-inside-{{i + 1}}">
+
+    </div> -->
+
+    <div class="card p-2 image-inside-1">
+        <img class="card-img-top" src="assets/img/valentine/header-1.jpg" alt="Card image cap">
+    </div>
+    <div class="card p-2 image-inside-2">
+        <img class="card-img-top" src="assets/img/valentine/header-2.jpg" alt="Card image cap">
+    </div>
+    <div class="card p-2 image-inside-3">
+        <img class="card-img-top" src="assets/img/valentine/header-3.jpg" alt="Card image cap">
+    </div>
+    <div class="card p-2 image-inside-4">
+        <img class="card-img-top" src="assets/img/valentine/header-4.jpg" alt="Card image cap">
+    </div>
+    <div class="card p-2 image-inside-5">
+        <img class="card-img-top" src="assets/img/valentine/header-5.jpg" alt="Card image cap">
+    </div>
+
+<!--    <div class="card p-2" style="width: 18rem; position: fixed; left: 5%">-->
+<!--        <img class="card-img-top" src="assets/img/valentine/background.jpg" alt="Card image cap">-->
+<!--    </div>-->
+<!--    <div class="card p-2" style="width: 18rem; position: fixed; right: 5%">-->
+<!--        <img class="card-img-top" src="assets/img/valentine/background.jpg" alt="Card image cap">-->
+<!--    </div>-->
+</div>
+<div class="main">
+    <div class="text-center">
+        <div class="navigation-example">
+            <nav class="navbar navbar-expand-lg bg-white mb-5">
+                <div class="container">
+                    <em class="text-pink text-gallery">Gallery</em>
+                    <div class="collapse navbar-collapse" id="navbar-danger">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-pink" href="#">2018</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-pink" href="#">2019</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-pink" href="#">2020</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-pink" href="#">2021</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <div class="card page-carousel">
+                        <ngb-carousel>
+                            <ng-template ngbSlide *ngFor="let photo of slides">
+                                <img style="width: 85% !important;" src="./assets/img/valentine/slide-{{photo.id}}.jpg" alt="{{photo.name}}">
+                                <div class="carousel-caption">
+                                    <p>{{photo.name}}</p>
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
+            </div>
+            <br/><br/>
+        </div>
+    </div>
+</div>
